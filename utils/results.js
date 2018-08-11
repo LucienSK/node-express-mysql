@@ -9,7 +9,7 @@ Results.response = function(response) {
   	errCode: 200,
   	errText: '',
   	success: true,
-  	data: response
+  	data: response || null
   }
 }
 /**
@@ -17,7 +17,7 @@ Results.response = function(response) {
  * @param  {Object} reject [description]
  * @return {Object}        [description]
  */
-Results.reject = function(reject) {
+Results.reject = function() {
   return {
   	errCode: 500,
   	errText: '数据查询失败',
